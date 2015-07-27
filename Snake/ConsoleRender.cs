@@ -34,7 +34,7 @@ namespace SnakeConsole
         public void displayItem(Point item)
         {
             Console.SetCursorPosition(item.x, item.y);
-            Console.Write("#");
+            Console.Write("@");
         }
 
         private void displayBorder()

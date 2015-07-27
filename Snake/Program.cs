@@ -14,8 +14,8 @@ namespace SnakeConsole
         {
             List<Point> snakePoints = new List<Point>();
 
-            int width = 100;
-            int height = 50;
+            int width = 50;
+            int height = 25;
 
             Snake snake = new Snake(width, height);
 
