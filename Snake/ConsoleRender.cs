@@ -23,7 +23,6 @@ namespace SnakeConsole
             try
             {
                 Console.SetWindowSize(windowWidth + 1, windowHeight + 1);
-                //This is a comment
             }
             catch (Exception)
             {
