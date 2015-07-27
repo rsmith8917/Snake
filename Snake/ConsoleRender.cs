@@ -31,6 +31,11 @@ namespace SnakeConsole
             displayBorder();
         }
 
+        public void displayItem(Point item)
+        {
+            Console.SetCursorPosition(item.x, item.y);
+            Console.Write("#");
+        }
 
         private void displayBorder()
         {

@@ -6,3 +6,11 @@ c:\users\robert\documents\visual studio 2015\Projects\Snake\Snake\bin\Debug\Snak
 c:\users\robert\documents\visual studio 2015\Projects\Snake\Snake\obj\Debug\SnakeConsole.csprojResolveAssemblyReference.cache
 c:\users\robert\documents\visual studio 2015\Projects\Snake\Snake\obj\Debug\Snake.exe
 c:\users\robert\documents\visual studio 2015\Projects\Snake\Snake\obj\Debug\Snake.pdb
+C:\Users\RobertS.BCI\Documents\Visual Studio 2015\Projects\Snake\Snake\Snake\bin\Debug\Snake.exe.config
+C:\Users\RobertS.BCI\Documents\Visual Studio 2015\Projects\Snake\Snake\Snake\obj\Debug\Snake.exe
+C:\Users\RobertS.BCI\Documents\Visual Studio 2015\Projects\Snake\Snake\Snake\obj\Debug\Snake.pdb
+C:\Users\RobertS.BCI\Documents\Visual Studio 2015\Projects\Snake\Snake\Snake\bin\Debug\Snake.exe
+C:\Users\RobertS.BCI\Documents\Visual Studio 2015\Projects\Snake\Snake\Snake\bin\Debug\Snake.pdb
+C:\Users\RobertS.BCI\Documents\Visual Studio 2015\Projects\Snake\Snake\Snake\bin\Debug\SnakeGame.dll
+C:\Users\RobertS.BCI\Documents\Visual Studio 2015\Projects\Snake\Snake\Snake\bin\Debug\SnakeGame.pdb
+C:\Users\RobertS.BCI\Documents\Visual Studio 2015\Projects\Snake\Snake\Snake\obj\Debug\SnakeConsole.csprojResolveAssemblyReference.cache

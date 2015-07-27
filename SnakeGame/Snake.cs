@@ -11,6 +11,7 @@ namespace SnakeGame
     {
         private List<Point> points = new List<Point>();
         private List<Point> lastPoints = new List<Point>();
+        public Point item { get; }
 
         private int xVelocity;
         private int XVelocity
@@ -40,6 +41,7 @@ namespace SnakeGame
         private int xLimit;
         private int yLimit;
         private int length = 25;
+        private readonly int extension = 1;
         private bool notCollided = true;
 
         private bool NotCollided
@@ -61,7 +63,13 @@ namespace SnakeGame
             get { return !notCollided; }
         }
 
-
+        private Point generateItem()
+        {
+            Random r = new Random();
+            item.x = r.Next(1, xLimit - 1);
+            item.y = r.Next(1, yLimit - 1);
+            return (Point)item.Clone();
+        }
 
         private readonly int delay = 50;
 
@@ -74,6 +82,9 @@ namespace SnakeGame
             this.xLimit = xLimit;
             this.yLimit = yLimit;
 
+            item = new Point();
+            generateItem();
+
             XVelocity = 1;
             YVelocity = 0;
             lastPoints = ClonableList.CloneList(points);
@@ -83,14 +94,37 @@ namespace SnakeGame
         {
 
             points[0].x += XVelocity;
-            points[0].y -= YVelocity; //Subtracting velocity so that "Up" is positive y 
+            points[0].y -= YVelocity; //Subtracting velocity so that "Up" is positive y
+
+            if (points[0].Equals(item))
+            {
+                length = length + extension;
+                generateItem();
+            } 
 
             if (NotCollided)
             {
                 for (int i = 1; i < length; i++)
                 {
-                    points[i].x = lastPoints[i - 1].x;
-                    points[i].y = lastPoints[i - 1].y;
+                    try
+                    {
+                        points[i].x = lastPoints[i - 1].x;
+                        points[i].y = lastPoints[i - 1].y;
+                    }
+                    catch (Exception)
+                    {
+                        for (int k = 1; k <= extension; k++)
+                        {
+                            points.Add(new Point()
+                            {
+                                x = lastPoints[lastPoints.Count() - 1].x + k*(lastPoints[lastPoints.Count() - 1].x - lastPoints[lastPoints.Count() - 2].x),
+                                y = lastPoints[lastPoints.Count() - 1].y + k*(lastPoints[lastPoints.Count() - 1].y - lastPoints[lastPoints.Count() - 2].y)
+                            });
+                        }
+
+
+                    }
+
                 }
             }
             else

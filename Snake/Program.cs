@@ -49,6 +49,7 @@ namespace SnakeConsole
                 }
 
                 render.displaySnake(snake.Move());
+                render.displayItem(snake.item);
             }
 
             if (snake.Dead)
